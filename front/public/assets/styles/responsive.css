@@ -8,6 +8,9 @@
     .desktop-menu {
         display: none;
     }
+    .content {
+        max-width: 90%;
+    }
     .cs-section .section-1 .header {
         width: 100%;
     }
@@ -21,7 +24,10 @@
         font-size: 20px;
     }
     .cs-section .section-1 .body .part2 .data-stack.view img, .cs-section .section-1 .body .part1 .data-stack.view img {
-        width: 170px;
+        width: 150px;
+    }
+    .cs-section .section-1 .body .part2 .data-stack.view, .cs-section .section-1 .body .part1 .data-stack.view {
+        gap: 25px;
     }
     .cs-section .section-1 .body .part2 h4, .cs-section .section-1 .body .part1 h4 {
         font-size: 26px;
@@ -51,19 +57,22 @@
         font-size: 14px;
     }
     .font-lg {
-        font-size: 75px;
+        font-size: 65px !important;
     }
     .font-lg span {
-        font-size: 81px;
+        font-size: 70px !important;
     }
     .fs-68 {
-        font-size: 58px !important;
+        font-size: 50px !important;
     }
     .fs-82 {
-        font-size: 70px !important;
+        font-size: 59px !important;
     }
     .head {
         width: 100%;
+    }
+    .services-grid {
+        gap: 15px;
     }
     .tech-stack {
         .head {
@@ -86,6 +95,12 @@
             }
         }
     }
+    .cyber-card-layout .card-layout.odd {
+        grid-template-columns: 1fr 2fr;
+    }
+    .cyber-card-layout .card-layout.even {
+        grid-template-columns: 2fr 1fr;
+    }
 }
 @media (max-width:1024px) and (min-width:768px){
     .footer-main {
@@ -99,10 +114,19 @@
         }
     }
     .tech-stack .tech-body .area h4 {
-        font-size: 90px;
+        font-size: 100px;
+        letter-spacing: 0;
     }
     .tech-stack .tech-body .area img {
-        height: 80px;
+        height: 90px;
+    }
+}
+@media (max-width:991px) and (min-width:768px){
+    .tech-stack .tech-body .area h4 {
+        font-size: 75px;
+    }
+    .tech-stack .tech-body .area img {
+        height: 70px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -136,10 +160,10 @@
         width: 100%;
     }
     .font-lg {
-        font-size: 36px;
+        font-size: 36px !important;
     }
     .font-lg span {
-        font-size: 46px;
+        font-size: 46px !important;
     }
     .card1 {
         width: 22% !important;
