@@ -118,14 +118,11 @@ const TechStack = () => {
                                     <div className="one position-rel">
                                         <h4 ref={addToWebRef}>Digital</h4>
                                         <div className="pill" style={getRandomStyle()}>
-                                        AngularJS
+                                        React
                                         </div>
                                     </div>
-                                    <div className="one eq">
+                                    <div className="one eq position-relative">
                                         <h4 ref={addToWebRef}>Banking</h4>
-                                        <div className="pill" style={getRandomStyle()}>
-                                        AngularJS
-                                        </div>
                                     </div>
                                     <div className="one lg position-rel">
                                         <h4 ref={addToWebRef}>Solutions</h4>
