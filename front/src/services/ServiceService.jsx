@@ -7,7 +7,7 @@ const create = async(formData) => {
 }
 
 const fetchServices = async() => {
-    const response = await axios.get(`${API_URL}/service/data`)
+    const response = await axios.get(`${API_URL}/service`)
     return response.data
 }
 
