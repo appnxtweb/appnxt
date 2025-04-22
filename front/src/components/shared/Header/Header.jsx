@@ -152,19 +152,36 @@ const Header = () => {
                                 <div className="mob-dropdown-menu">
                                     <div className="part1">
                                         <ul>
-                                            <li onClick={() => setServiceLinks('webAppDev')}><h4>Web App <span>Development</span></h4></li>
-                                            <li onClick={() => setServiceLinks('enterpriseMessaging')}><h4>Enterprise <span>Messaging </span></h4></li>
-                                            <li onClick={() => setServiceLinks('smartCards')}><h4>Smart <span>Cards</span></h4></li>
-                                            <li onClick={() => setServiceLinks('mobileAppDev')}><h4>Mobile App <span>Development</span></h4></li>
-                                            <li onClick={() => setServiceLinks('brandingAndMarketing')}><h4>Branding and Marketing <span>Solutions</span></h4></li>
+                                            {serviceCategory?.map((value, index) => {
+                                                const heading = value; // e.g., "Full Stack Development"
+                                                const lastWordIndex = heading.split(" ").length - 1;
+                                                const lastWord = splitter(heading, lastWordIndex, lastWordIndex + 1);
+                                                const mainHeading = splitter(heading, 0, lastWordIndex);
+                                                return (
+                                                    <li
+                                                        key={index}
+                                                        onClick={() => toggleServiceLinks(value)} // Reuse toggleServiceLinks
+                                                    >
+                                                        <h4>
+                                                            {mainHeading} <span>{lastWord}</span>
+                                                        </h4>
+                                                    </li>
+                                                );
+                                            })}
                                         </ul>
                                     </div>
                                     <div className="part2">
                                         <ul>
-                                            <li className='opacity-5'>Browse by category</li>
-                                            {services?.[serviceLinks]?.map((item, index) => (
-                                                <li key={index}><NavLink to={"/"}>{item.name}</NavLink></li>
-                                            ))}
+                                            <li className="opacity-5">Browse by category</li>
+                                            {Array.isArray(serviceLinks) &&
+                                                serviceLinks.length > 0 &&
+                                                serviceLinks.map((item, index) => (
+                                                    <li key={index}>
+                                                        <NavLink to={`/service/${item?.link?.url}`}>
+                                                            {item.heading}
+                                                        </NavLink>
+                                                    </li>
+                                                ))}
                                         </ul>
                                     </div>
                                 </div>

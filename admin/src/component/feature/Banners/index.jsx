@@ -56,7 +56,7 @@ const Banners = () => {
                 </thead>
                 <tbody>
                   {banners.map((banner) => (
-                    <tr key={banner._id}>
+                    <tr key={banner._id} className={banner._id}>
                       <td>
                         <img
                           src={banner?.bannerImg?.s3Url}

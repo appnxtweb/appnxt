@@ -29,8 +29,7 @@ const Portfolio = () => {
         }
         heading={"Projects"}
         bgURL={
-          bannerHeading?.data?.bannerImg?.s3Url ||
-          "/assets/img/portfolio-banner.svg"
+          bannerHeading?.data?.bannerImg?.s3Url
         }
       />
 

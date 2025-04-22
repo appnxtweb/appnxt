@@ -3,12 +3,25 @@ body {
     overflow-x: hidden;
 }
 
-html,
-body {
+/* Existing html, body styles */
+html, body {
     will-change: transform;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     overflow-x: clip;
+}
+
+/* Ensure #root never allows horizontal scrolling */
+#root {
+    overflow-x: hidden; /* Always hide horizontal overflow */
+    overflow-y: auto; /* Default: allow vertical scrolling */
+    height: auto;
+}
+
+/* Apply restrictive styles when sidebar is open */
+#root.menu-open {
+    overflow-y: clip; /* Prevent vertical scrolling when menu is open */
+    height: 100vh;
 }
 
 html {
@@ -255,7 +268,7 @@ header {
     right: 0;
     transform: translateX(100%);
     top: 0;
-    position: absolute;
+    position: fixed;
     transition: 0.5s all;
     display: flex;
     flex-direction: column;
@@ -1141,7 +1154,9 @@ header {
     background-size: cover;
     justify-content: center;
     align-items: center;
-    /* background-image: url('/assets/img/about-banner.svg'); */
+    background-position: center;
+    background-color: #00000057;
+    background-blend-mode: overlay;
     .content {
         max-width: 40%;
         display: flex;
@@ -1389,6 +1404,9 @@ header {
             align-items: start;
             padding: 40px;
             gap: 60px;
+            h4 {
+                text-align: left;
+            }
         }
     }
     .card-cs .card-layout.odd {
@@ -1414,6 +1432,9 @@ header {
             align-items: start;
             padding: 40px;
             gap: 60px;
+            h4 {
+                text-align: left;
+            }
         }
     }
     /* Animation with scroll effect */
@@ -1527,11 +1548,11 @@ header {
     gap: 10px;
 }
 
-.home-hero-sec {
-    background-image: url("/assets/gif/hero-ban-bg.gif");
-    background-size: calc(100% - 25px) auto;
-    background-position: center;
-    background-repeat: no-repeat !important;
+.hero-ban-bg {
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .contact .card-section {

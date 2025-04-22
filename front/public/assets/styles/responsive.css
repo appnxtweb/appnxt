@@ -53,6 +53,15 @@
     .cs-section .section-2 .counter .box p {
         font-size: 18px;
     }
+    .main-banner .blur {
+        bottom: -50px;
+    }
+    .main-banner {
+        .card3 {
+            bottom: 15%;
+            right: 10%;
+        }
+    }
     .font-sm {
         font-size: 14px;
     }
@@ -120,6 +129,16 @@
     .tech-stack .tech-body .area img {
         height: 90px;
     }
+    .slider-menu .header .part-1 {
+        gap: 20px;
+        flex-direction: column;
+        align-items: start;
+    }
+    .global-banner {
+        .content {
+            max-width: 90%;
+        }
+    }
 }
 @media (max-width:991px) and (min-width:768px){
     .tech-stack .tech-body .area h4 {
@@ -156,7 +175,7 @@
         height: 400px;
     }
     .main-banner .blur {
-        bottom: -110;
+        bottom: -110px;
         width: 100%;
     }
     .font-lg {
@@ -195,7 +214,10 @@
         justify-self: start;
     }
     .main-banner .heading {
-        bottom: -110px;
+        bottom: -120px;
+    }
+    .hero-ban-bg {
+        height: auto;
     }
     .connect-btn {
         gap: 10px;

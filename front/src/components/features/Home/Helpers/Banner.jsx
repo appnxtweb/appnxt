@@ -178,10 +178,8 @@ const Banner = () => {
 
   return (
     <>
-      <div
-        className="home-hero-sec"
-        style={{ backgroundImage: `url("${bannerImg?.s3Url}")` }}
-      >
+      <div className="home-hero-sec position-relative">
+      <img src={bannerImg?.s3Url} alt="Banner" className="hero-ban-bg w-100 position-absolute" />
         <div className="container">
           <div className="row">
             <div className="col-md-12">
