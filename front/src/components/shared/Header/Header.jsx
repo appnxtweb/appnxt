@@ -226,7 +226,6 @@ const Header = () => {
                             key={index}
                             onClick={() => {
                               toggleServiceLinks(value);
-                              resetMenu();
                             }}
                           >
                             <h4>

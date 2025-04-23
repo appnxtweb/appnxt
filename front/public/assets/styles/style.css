@@ -1358,7 +1358,7 @@ header {
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Mono:wght@400;500&display=swap');
 .stack-card {
-     :root {
+    :root {
         --card-height: 40vw;
         --card-margin: 4vw;
         --card-top-offset: 1em;
@@ -1451,6 +1451,33 @@ header {
     }
     .card-cs:nth-child(3) {
         animation: scale 1s ease-out 1s;
+    }
+    .card-cs {
+        padding-bottom: 20px; /* Space for pagination */
+    }
+    
+    .mySwiper {
+        padding-bottom: 60px;
+    }
+    
+    .swiper-pagination {
+        text-align: center;
+        bottom: 0px !important;
+    }
+    
+    .swiper-pagination-bullet {
+        background: #4b5563; /* Gray for inactive bullets, suitable for dark theme */
+        opacity: 0.7;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background: #ffffff; /* White for active bullet */
+        opacity: 1;
+        transform: scale(1.2); /* Slightly larger active bullet */
     }
 }
 

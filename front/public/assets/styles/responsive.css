@@ -260,6 +260,11 @@
             width: 100%;
         }
     }
+    .stack-card { 
+        .card-cs {
+            top: 0;
+        }
+    }
     .work .body .content .data-stack h4 span {
         font-size: 25px;
     }
