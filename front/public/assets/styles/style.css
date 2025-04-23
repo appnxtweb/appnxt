@@ -1754,7 +1754,10 @@ header {
     line-height: normal;
     margin-top: 30px;
 }
-
+.contact .form-section .form-message {
+    color: #fff;
+    margin: 0px;
+}
 .grid-cs {
     display: grid;
     grid-template-columns: 1fr 1fr;
