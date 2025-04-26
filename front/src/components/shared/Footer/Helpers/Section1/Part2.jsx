@@ -18,7 +18,7 @@ const Part2 = () => {
                 </div>
             </div>
             <NavLink to='/contact' className='connect-btn text-deco-none'>Let’s Connect <img src="/assets/img/arrow.svg" alt="" /></NavLink>
-            <img src="assets/img/cert-img.png" />
+            <img src="../assets/img/cert-img.png" />
         </div>
     </>
   )
