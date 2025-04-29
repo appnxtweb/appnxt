@@ -270,20 +270,14 @@ const Header = () => {
             </NavLink>
           </div>
           <div className="footer">
-            <NavLink to="/" onClick={resetMenu} className="font-md">
+            <NavLink to="https://www.instagram.com/appnxt.in" onClick={resetMenu} className="font-md" target="_blank">
+              IG
+            </NavLink>
+            <NavLink to="https://in.pinterest.com/appnxt_" onClick={resetMenu} className="font-md" target="_blank">
+              PT
+            </NavLink>
+            <NavLink to="https://x.com/Appnxt_" onClick={resetMenu} className="font-md" target="_blank">
               TW
-            </NavLink>
-            <NavLink to="/" onClick={resetMenu} className="font-md">
-              FB
-            </NavLink>
-            <NavLink to="/" onClick={resetMenu} className="font-md">
-              YT
-            </NavLink>
-            <NavLink to="/" onClick={resetMenu} className="font-md">
-              BE
-            </NavLink>
-            <NavLink to="/" onClick={resetMenu} className="font-md">
-              DR
             </NavLink>
           </div>
         </div>
