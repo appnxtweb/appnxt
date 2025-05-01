@@ -6,6 +6,8 @@ import Home from "../../components/features/Home/Home"
 import Inner from "../../components/features/Portfolio/Inner"
 import Portfolio from "../../components/features/Portfolio/Portfolio"
 import Service from "../../components/features/Service/Service"
+import PrivacyPolicy from "../../components/features/PrivacyPolicy/PrivacyPolicy"
+import TermsAndConditions from "../../components/features/TermsAndConditions/TermsAndConditions"
 
 
 const rootRoutes = [
@@ -40,6 +42,14 @@ const rootRoutes = [
     {
         path : '/digital-banking-solutions',
         element : <DigitalBankingSolution />
+    },
+    {
+        path : '/privacy-policy',
+        element : <PrivacyPolicy />
+    },
+    {
+        path : '/terms-and-conditions',
+        element : <TermsAndConditions />
     },
 ]
 

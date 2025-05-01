@@ -138,6 +138,9 @@
         .content {
             max-width: 90%;
         }
+    }    
+    .plain-text-cont {
+        padding: 70px 20px;
     }
 }
 @media (max-width:991px) and (min-width:768px){
@@ -637,5 +640,7 @@
             }
         }
     }
-    /* */
+    .plain-text-cont {
+        padding: 60px 20px;
+    }
 }
