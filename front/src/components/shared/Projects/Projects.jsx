@@ -95,15 +95,15 @@ const Projects = ({ content, type }) => {
           opacity: 0,
           y: 100
         }, {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: descriptionRef.current,
-            start: "top bottom-=100",
-            end: "bottom center",
-            toggleActions: "play none none reverse"
-          }
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: descriptionRef.current,
+          start: "top bottom-=100",
+          end: "bottom center",
+          toggleActions: "play none none reverse"
+        }
     });
     }
   }, []);
