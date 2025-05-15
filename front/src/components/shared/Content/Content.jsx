@@ -26,47 +26,40 @@ const Content = ({ heading, content }) => {
       }
     });
 
-    // Content text animation
-    const contentText = contentRef.current;
-    
-    splitTextIntoSpans(contentText);
+    gsap.registerPlugin(ScrollTrigger);
 
-    gsap.fromTo(contentRef.current.querySelectorAll('span span span'), {
+    // Heading animation
+    gsap.fromTo(contentRef.current, {
       opacity: 0,
-      x: 50,
-     
-      filter: 'blur(10px)',
-     
-      scrollTrigger: {
-        trigger: contentRef.current,
-        start: "top bottom-=100",
-        end: "bottom center", 
-        toggleActions: "play none none reverse"
-      }
+      x: 150
     }, {
       opacity: 1,
       x: 0,
-      filter: 'blur(0px)',
-      duration: 0.5,
-      stagger: 0.05,
+      duration: 1,
+      scrollTrigger: {
+        trigger: contentRef.current,
+        start: "top bottom-=100",
+        end: "bottom center",
+        toggleActions: "play none none reverse"
+      }
     });
 
   }, [content]);
 
   return (
     <>
-        <div className="container pt-cs">
-            <div className="row gap-10">
-                <div className="col-md-4">
-                    <h4 ref={headingRef} className='font-md fw-600'>{heading}</h4>
-                </div>
-                <div className="col-md-8">
-                  <h4 ref={contentRef} className="font-md fs-20">
-                      {content}
-                  </h4>
-                </div>
-            </div>
+      <div className="container pt-cs">
+        <div className="row gap-10">
+          <div className="col-md-4">
+            <h4 ref={headingRef} className='font-md fw-600'>{heading}</h4>
+          </div>
+          <div className="col-md-8">
+            <h4 ref={contentRef} className="font-md fs-20">
+              {content}
+            </h4>
+          </div>
         </div>
+      </div>
     </>
   )
 }

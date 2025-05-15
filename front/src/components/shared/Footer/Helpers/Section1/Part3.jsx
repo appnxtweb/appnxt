@@ -23,7 +23,7 @@ const Part3 = ({mobile}) => {
                     </a>
                 </div>
             </div>
-            <p className={`term-links font-sm fs-16 ${!mobile ? 'text-end' : 'text-start'}`}><a href="/terms-and-conditions">Terms & Condition</a> &nbsp; | &nbsp; <a href="/privacy-policy">Privacy Policy</a></p>
+            <p className={`term-links font-sm fs-16 ${!mobile ? 'text-end' : 'tslider-serviceext-start'}`}><a href="/terms-and-conditions">Terms & Condition</a> &nbsp; | &nbsp; <a href="/privacy-policy">Privacy Policy</a></p>
         </div>
     </>
   )

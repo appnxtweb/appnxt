@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import splitTextIntoSpans from "../../../../util/split";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { splitter } from "../../../../util/Splitter";
@@ -118,59 +117,45 @@ const Banner = () => {
       headingRef.current,
       {
         opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power1.out",
+        y: 30
       },
       {
         opacity: 1,
         y: 0,
-        duration: 1,
-        ease: "power1.out",
+        duration: 0.8,
+        ease: "power2.out"
       },
       ">"
     );
 
-    // mainTimeline.fromTo(gifRef.current, {
-    //   opacity: 0,
-    //   scale: 0,
-    //   duration: 1,
-    //   ease: "power1.out"
-    // }, {
-    //   opacity: 1,
-    //   scale: 1,
-    //   duration: 1,
-    //   ease: "power1.out"
-    // }, "-=0.5");
-
-    const paragraphText = paragraphRef.current;
-    splitTextIntoSpans(paragraphText);
-
-    mainTimeline.to(
-      paragraphRef.current.querySelectorAll("span span span"),
+    // Paragraph animation
+    mainTimeline.fromTo(
+      paragraphRef.current,
+      {
+        opacity: 0,
+        y: 30
+      },
       {
         opacity: 1,
-        duration: 0.5,
-        stagger: 0.01,
-        xPercent: 0,
-        ease: "power1.out",
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
       },
       ">"
     );
 
+    // Button animation
     mainTimeline.fromTo(
       buttonRef.current,
       {
         opacity: 0,
-        y: 50,
-        duration: 0.5,
-        ease: "power1.out",
+        y: 30
       },
       {
         opacity: 1,
         y: 0,
-        duration: 0.5,
-        ease: "power1.out",
+        duration: 0.8,
+        ease: "power2.out"
       },
       ">"
     );
@@ -179,7 +164,7 @@ const Banner = () => {
   return (
     <>
       <div className="home-hero-sec position-relative">
-      <img src={bannerImg?.s3Url} alt="Banner" className="hero-ban-bg w-100 position-absolute" />
+        <img src={bannerImg?.s3Url} alt="Banner" className="hero-ban-bg w-100 position-absolute" />
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -226,7 +211,7 @@ const Banner = () => {
                     ref={buttonRef}
                     className="connect-btn text-deco-none"
                   >
-                    Let&apos;s Connect{" "}
+                    Let's Connect{" "}
                     <img src="/assets/img/arrow.svg" alt="" />
                   </NavLink>
                 </div>

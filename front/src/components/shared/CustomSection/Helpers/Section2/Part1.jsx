@@ -29,21 +29,22 @@ const Part1 = () => {
         }
 
         if (descriptionRef.current) {
-            splitTextIntoSpans(descriptionRef.current);
-            gsap.fromTo(descriptionRef.current.querySelectorAll('span'), {
-                opacity: 0,
-                x: 50
+            gsap.registerPlugin(ScrollTrigger);
+            // description animation
+            gsap.fromTo(descriptionRef.current, {
+            opacity: 0,
+            y: 100
             }, {
-                opacity: 1,
-                x: 0,
-                duration: 0.5,
-                stagger: 0.02,
-                scrollTrigger: {
-                    trigger: descriptionRef.current,
-                    start: "top bottom",
-                    toggleActions: "play none none reverse"
-                }
-            });
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: descriptionRef.current,
+                start: "top bottom-=100",
+                end: "bottom center",
+                toggleActions: "play none none reverse"
+            }
+    });
         }
     }, []);
 

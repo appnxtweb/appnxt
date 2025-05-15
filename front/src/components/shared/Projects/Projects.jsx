@@ -88,30 +88,23 @@ const Projects = ({ content, type }) => {
 
     // Animate description text
     if (descriptionRef.current) {
-      splitTextIntoSpans(descriptionRef.current);
+      gsap.registerPlugin(ScrollTrigger);
 
-      gsap.fromTo(
-        descriptionRef.current.querySelectorAll("span span span"),
-        {
+        // description animation
+        gsap.fromTo(descriptionRef.current, {
           opacity: 0,
-          x: 20,
-          filter: "blur(10px)",
-          duration: 0.4,
-          stagger: 0.02,
+          y: 100
+        }, {
+          opacity: 1,
+          y: 0,
+          duration: 1,
           scrollTrigger: {
             trigger: descriptionRef.current,
-            start: "top bottom",
-            toggleActions: "play none none reverse",
-          },
-        },
-        {
-          opacity: 1,
-          x: 0,
-          filter: "blur(0px)",
-          duration: 0.4,
-          stagger: 0.02,
-        }
-      );
+            start: "top bottom-=100",
+            end: "bottom center",
+            toggleActions: "play none none reverse"
+          }
+    });
     }
   }, []);
 
