@@ -618,7 +618,7 @@ header {
     }
 }
 
-.work .body .image video {
+.work .body .image img {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;

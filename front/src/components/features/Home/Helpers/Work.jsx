@@ -16,8 +16,8 @@ const Work = () => {
 
     // Heading animation
     if (headingRef.current) {
-    //   splitter(headingRef.current);
-      
+      //   splitter(headingRef.current);
+
       gsap.fromTo(headingRef.current, {
         opacity: 0,
         y: 50,
@@ -72,40 +72,40 @@ const Work = () => {
 
   return (
     <>
-        <div className="container pt-cs">
-            <div className="row">
-                <div className="col-md-12">
-                    <div className="work">
-                        <h4 className="font-lg text-start" ref={headingRef}>
-                        <span>What We Do</span> <br />
-                        Innovation, Collaboration, <span>And</span> Transformation of Ideas
-                        </h4>
-                        <div className='body'>
-                            <div className="content" ref={contentRef}>
-                              {
-                                data?.map((value, index) => {
-                                  const heading = value.head; // e.g., "Full Stack Development"
-                                  const lastWordIndex = heading.split(" ").length - 1; // Get the index of the last word
-                                  const lastWord = splitter(heading, lastWordIndex, lastWordIndex + 1); // Extract the last word
-                                  const mainHeading = splitter(heading, 0, lastWordIndex); // Extract the rest of the heading
+      <div className="container pt-cs">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="work">
+              <h4 className="font-lg text-start" ref={headingRef}>
+                <span>What We Do</span> <br />
+                Innovation, Collaboration, <span>And</span> Transformation of Ideas
+              </h4>
+              <div className='body'>
+                <div className="content" ref={contentRef}>
+                  {
+                    data?.map((value, index) => {
+                      const heading = value.head; // e.g., "Full Stack Development"
+                      const lastWordIndex = heading.split(" ").length - 1; // Get the index of the last word
+                      const lastWord = splitter(heading, lastWordIndex, lastWordIndex + 1); // Extract the last word
+                      const mainHeading = splitter(heading, 0, lastWordIndex); // Extract the rest of the heading
 
-                                  return (
-                                    <div className="data-stack">
-                                        <h4>{mainHeading} <span>{lastWord}</span></h4>
-                                        <p className='font-sm'>{value.body}</p>
-                                    </div>
-                                  )
-                                })
-                              }
-                            </div>
-                            <div className="image">
-                                <video ref={videoRef} autoPlay loop muted src="/assets/gif/work-img.mp4"></video>
-                            </div>
+                      return (
+                        <div className="data-stack">
+                          <h4>{mainHeading} <span>{lastWord}</span></h4>
+                          <p className='font-sm'>{value.body}</p>
                         </div>
-                    </div>
+                      )
+                    })
+                  }
                 </div>
+                <div className="image">
+                  <img className="blur" src="/assets/gif/tech-gif.gif" alt="" />
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </>
   )
 }
