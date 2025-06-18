@@ -9,5 +9,6 @@ routes.use("/admin/procedure", require("../controllers/WorkProcessController"));
 routes.use("/admin/whatwedo", require("../controllers/WhatWeDoController"));
 routes.use("/admin/service", require("../controllers/ServicesController"));
 routes.use("/admin/banners", require("../controllers/BannerController"));
+routes.use("/admin/email", require("../controllers/EmailController"));
 
 module.exports = routes;
