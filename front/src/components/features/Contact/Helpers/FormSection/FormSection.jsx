@@ -111,7 +111,7 @@ const FormSection = () => {
                     required
                   ></textarea>
                   <button type="submit">Get in Touch</button>
-                  {status && <p>{status}</p>}
+                  {status && <p className="text-white">{status}</p>}
                 </form>
                 {/* </div> */}
               </div>
